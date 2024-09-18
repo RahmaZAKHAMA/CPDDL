@@ -8,7 +8,7 @@ CREATE TABLE Customer (
 CREATE TABLE Product (
     Product_id NUMBER PRIMARY KEY,
     Product_name VARCHAR2(50),
-    Price VARCHAR2(50),
+    Price  NUMBER(10, 2) NOT NULL,
     
 );
 
@@ -24,13 +24,13 @@ CREATE TABLE Customer_Product (
 
 INSERT INTO Customer (Customer_id, Customer_name,  Customer_tel) 
 VALUES (1, 'RAHMA', '22334455'),
-        (2, 'AMINE', ' [email protected]'),
-        (3, 'CHADY', ' [email protected]');
+        (2, 'AMINE', '22445566'),
+        (3, 'CHADY', ' 33445566');
       
 INSERT INTO Product (Product_id, Product_name,  Price) 
-VALUES (1, 'product1', '5000'),
-        (2, 'product2', ' 200'),
-        (3, 'product3', ' 1000');
+VALUES (1, 'product1', 5000),
+        (2, 'product2', 200),
+        (3, 'product3', 1000);
       
 INSERT INTO Customer_Product (Customer_id, Product_id,  Quantity,Total_amount) 
 VALUES (1, 1, 1,5000),
